@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.8.30+commit.73712a01"
+		"version": "0.8.31+commit.fd3a2265"
 	},
 	"language": "Solidity",
 	"output": {
@@ -11,8 +11,32 @@
 				"type": "constructor"
 			},
 			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "message",
+						"type": "string"
+					}
+				],
+				"name": "NotAuthorized",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_momey",
+						"type": "uint256"
+					}
+				],
+				"name": "addFounds",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
 				"inputs": [],
-				"name": "checkMsgSender",
+				"name": "boos",
 				"outputs": [
 					{
 						"internalType": "address",
@@ -20,7 +44,7 @@
 						"type": "address"
 					}
 				],
-				"stateMutability": "nonpayable",
+				"stateMutability": "view",
 				"type": "function"
 			},
 			{
@@ -38,12 +62,12 @@
 			},
 			{
 				"inputs": [],
-				"name": "person",
+				"name": "founds",
 				"outputs": [
 					{
-						"internalType": "address",
+						"internalType": "uint256",
 						"name": "",
-						"type": "address"
+						"type": "uint256"
 					}
 				],
 				"stateMutability": "view",
@@ -65,7 +89,7 @@
 		"compilationTarget": {
 			"contracts/2_Owner.sol": "Owner"
 		},
-		"evmVersion": "prague",
+		"evmVersion": "osaka",
 		"libraries": {},
 		"metadata": {
 			"bytecodeHash": "ipfs"
@@ -78,11 +102,11 @@
 	},
 	"sources": {
 		"contracts/2_Owner.sol": {
-			"keccak256": "0x5629d8dae1b8370cb3e111998035f84ef15745c134b0fbecfd06a9e38c81f5c3",
+			"keccak256": "0x538684ef9d60684f222477ef9bf15c647df3516a175126efedcd7381fbc6328f",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://e098e07b21babe02ba940006d6f0f167c8083fad37642fe22c5eb766459112b9",
-				"dweb:/ipfs/QmZsnXfbZiXjGUn1PsQTJFRs3Db8yTUYu84AEjQyCnvxNh"
+				"bzz-raw://3b35780a7c1c0ba05a936f825bd636e6cb0ded6784a73149b6461af09c119d9c",
+				"dweb:/ipfs/QmTpqCZKSxAaSyUTcFvZqM8dK5JJ9EBXg4b7B1wBBdTtxy"
 			]
 		}
 	},
