@@ -74,15 +74,15 @@ contract Twitter{
 
 
 // tweets: A mapping to store all tweets. 
- mapping (uint => Tweet)  tweets;
+ mapping (uint => Tweet) public  tweets;
 // tweetsOf: A mapping to store the IDs of tweets by each user.
-mapping (address => uint)  tweetsOf;
+mapping (uint => uint[]) public   tweetsOf;
 // conversations: A mapping to store direct messages between users.
-mapping (address => string)  conversations;
+mapping (address => Message[]) public conversations;
 // operators: A mapping to manage operator permissions.
-mapping (address => bool)  operators;
+mapping (address => mapping(address => bool)) public   operators;
 // following: A mapping to store the list of users that each user follows.
-mapping (address => uint) following;
+mapping (address => address[]) public  following;
 
 
 
@@ -93,6 +93,9 @@ uint  nextMessageId = 0;
 
 //array to stor all tweets
 Tweet[]  public allTweets;
+Message[] public  allMessages;
+
+
 
 
 //contrustore
@@ -103,8 +106,8 @@ constructor(){
 
 // Functions:
 
-// _tweet(address _from, string memory _content): Internal function to handle the tweeting logic.
-function tweet(address _from, string memory _content) internal {
+//1 . _tweet(address _from, string memory _content): Internal function to handle the tweeting logic.
+function _tweet(address _from, string memory _content) internal   {
     tweets[nextTweetId] = Tweet({
         Id : nextTweetId,
         author : _from,
@@ -116,11 +119,41 @@ function tweet(address _from, string memory _content) internal {
     nextTweetId++;
 }
 
-// _sendMessage(address _from, address _to, string memory _content): Internal function to handle messaging logic.
+//2 . _sendMessage(address _from, address _to, string memory _content): Internal function to handle messaging logic.
+function _sendMessage(address _from, address _to, string memory _content) internal    {
+   conversations[_from].push(Message({
+         Id : nextMessageId,
+         content : _content,
+        sender : _from,
+        receiver : _to,
+        creation_timestamp : block.timestamp
+   }));
+   //store in array
+   allMessages.push(Message({
+         Id : nextMessageId,
+         content : _content,
+        sender : _from,
+        receiver : _to,
+        creation_timestamp : block.timestamp
+   }));
+   //update message id
+   nextMessageId +=1;
+}
+
+//3. tweet(string memory _content): Allows a user to post a tweet.
+function tweet(string memory _content) public {
+    //create tweet
+    _tweet(msg.sender, _content);
+}
 
 
+//4. tweet(address _from, string memory _content): Allows an operator to post a tweet on behalf of a user.
+function tweet(address _from, string memory _content) public {
+
+//check first is permission 
 
 
+}
 
 
 

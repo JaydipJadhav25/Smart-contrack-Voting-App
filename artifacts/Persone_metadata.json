@@ -81,7 +81,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/OOP.sol": "Demo"
+			"contracts/OOP.sol": "Persone"
 		},
 		"evmVersion": "osaka",
 		"libraries": {},

@@ -1,0 +1,72 @@
+{
+	"id": "38193eed5db2e18978f8069732c6a007",
+	"_format": "hh-sol-build-info-1",
+	"solcVersion": "0.8.31",
+	"solcLongVersion": "0.8.31+commit.fd3a2265",
+	"input": {
+		"language": "Solidity",
+		"sources": {
+			"contracts/Library.sol": {
+				"content": "// // SPDX-License-Identifier: GPL-3.0\r\n\r\n\r\n// pragma solidity >=0.7.0 <0.9.0;\r\n\r\n// library Opreations{\r\n//     function addition(uint a , uint b) external  pure returns(uint){\r\n//         return  a+b;\r\n//     }\r\n\r\n//        function subtraction(uint a , uint b) external  pure returns(uint){\r\n//         return  a-b;\r\n//     }\r\n// }"
+			}
+		},
+		"settings": {
+			"optimizer": {
+				"enabled": false,
+				"runs": 200
+			},
+			"outputSelection": {
+				"*": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"metadata",
+						"devdoc",
+						"userdoc",
+						"storageLayout",
+						"evm.legacyAssembly",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"evm.gasEstimates",
+						"evm.assembly"
+					]
+				}
+			},
+			"remappings": []
+		}
+	},
+	"output": {
+		"errors": [
+			{
+				"component": "general",
+				"errorCode": "3420",
+				"formattedMessage": "Warning: Source file does not specify required compiler version! Consider adding \"pragma solidity ^0.8.31;\"\n--> contracts/Library.sol\n\n",
+				"message": "Source file does not specify required compiler version! Consider adding \"pragma solidity ^0.8.31;\"",
+				"severity": "warning",
+				"sourceLocation": {
+					"end": -1,
+					"file": "contracts/Library.sol",
+					"start": -1
+				},
+				"type": "Warning"
+			}
+		],
+		"sources": {
+			"contracts/Library.sol": {
+				"ast": {
+					"absolutePath": "contracts/Library.sol",
+					"exportedSymbols": {},
+					"id": 1,
+					"license": "GPL-3.0",
+					"nodeType": "SourceUnit",
+					"nodes": [],
+					"src": "334:0:0"
+				},
+				"id": 0
+			}
+		}
+	}
+}
