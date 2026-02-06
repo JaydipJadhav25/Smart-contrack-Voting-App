@@ -1,5 +1,5 @@
 {
-	"id": "cf8994027005aa471a6d33bf9e390a61",
+	"id": "ff4abf55be9449764ea35e2c4371fb34",
 	"_format": "hh-sol-build-info-1",
 	"solcVersion": "0.8.31",
 	"solcLongVersion": "0.8.31+commit.fd3a2265",
@@ -7,7 +7,7 @@
 		"language": "Solidity",
 		"sources": {
 			"contracts/demo.sol": {
-				"content": "// // SPDX-License-Identifier: GPL-3.0\r\n\r\n\r\n// pragma solidity >=0.7.0 <0.9.0;\r\n\r\n\r\n// import \"./Library.sol\";\r\n\r\n// contract Demo{\r\n//     function result(uint a , uint b)external pure returns(uint){\r\n//         return  Opreations.additions(a ,b);\r\n//     }\r\n// }"
+				"content": "// SPDX-License-Identifier: GPL-3.0\r\n\r\n\r\n// pragma solidity >=0.7.0 <0.9.0;\r\n\r\n\r\n// import \"./Library.sol\";\r\n\r\n// contract Demo{\r\n//     function result(uint a , uint b)external pure returns(uint){\r\n//         return  Opreations.additions(a ,b);\r\n//     }\r\n// }"
 			}
 		},
 		"settings": {
@@ -63,7 +63,7 @@
 					"license": "GPL-3.0",
 					"nodeType": "SourceUnit",
 					"nodes": [],
-					"src": "264:0:0"
+					"src": "261:0:0"
 				},
 				"id": 0
 			}

@@ -8,12 +8,41 @@
 			{
 				"inputs": [
 					{
-						"internalType": "address",
-						"name": "_conAdd",
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "age",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "fixarray",
+						"type": "uint256[]"
+					}
+				],
+				"name": "demo",
+				"outputs": [
+					{
+						"internalType": "bytes",
+						"name": "",
+						"type": "bytes"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "contract A",
+						"name": "acontractAddress",
 						"type": "address"
 					}
 				],
-				"name": "getDemofun",
+				"name": "getVal",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -21,7 +50,20 @@
 						"type": "uint256"
 					}
 				],
-				"stateMutability": "pure",
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "contract A",
+						"name": "acontractAddress",
+						"type": "address"
+					}
+				],
+				"name": "setVal",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			}
 		],
@@ -38,7 +80,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/OOP.sol": "B"
+			"contracts/2_Owner.sol": "B"
 		},
 		"evmVersion": "osaka",
 		"libraries": {},
@@ -52,12 +94,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/OOP.sol": {
-			"keccak256": "0x96dad97a15c45278a365eedbb707b9a60cc709742b42fcbc3a54f46274258017",
+		"contracts/2_Owner.sol": {
+			"keccak256": "0xf393557b16b6a87b3441fb84a03d2a27f9569071e7d600f45929fef56a79c678",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://c724895c39831055c28eca2ec2bd028af0ef936918eb205c4cfa36ec02bbf6f9",
-				"dweb:/ipfs/QmQXkbD89BLjQcnAHrN2FFYf7GsGNs4uq1UdGVLsCmmi23"
+				"bzz-raw://28fba86526f833740a532a2e38a3911b980a05865fa4d7ce89aaea36cd34a3eb",
+				"dweb:/ipfs/QmfFvBFNfyqn3Hj87kfnqSeSW8UKXHJQWSruaHTKfRsDN2"
 			]
 		}
 	},

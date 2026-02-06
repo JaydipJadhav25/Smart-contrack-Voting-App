@@ -89,13 +89,19 @@ contract SimpleWallet {
      //to send money
      //event emit
      emit  Transfer(_to, _weiAmount);
+
           transcationHistory.push(Transaction({
        send : msg.sender,
        to : _to,
        timestamp : block.timestamp,
        amount : _weiAmount
       }));
-     _to.transfer(_weiAmount);
+
+    //  _to.transfer(_weiAmount);
+
+     (bool ok , ) = _to.call{value : _weiAmount}("");
+
+     require(ok, "failed !");
 
     }
 

@@ -7,70 +7,9 @@
 		"abi": [
 			{
 				"inputs": [],
-				"stateMutability": "nonpayable",
-				"type": "constructor"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "string",
-						"name": "message",
-						"type": "string"
-					}
-				],
-				"name": "NotAuthorized",
-				"type": "error"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "_momey",
-						"type": "uint256"
-					}
-				],
-				"name": "addFounds",
+				"name": "send",
 				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "boos",
-				"outputs": [
-					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "checkTimestamp",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "founds",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
+				"stateMutability": "payable",
 				"type": "function"
 			}
 		],
@@ -102,11 +41,11 @@
 	},
 	"sources": {
 		"contracts/2_Owner.sol": {
-			"keccak256": "0x538684ef9d60684f222477ef9bf15c647df3516a175126efedcd7381fbc6328f",
+			"keccak256": "0xfc20cd5762199bc0c8d1425b369b48ab0b98074769cc2d06abf2a855aa67a58e",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://3b35780a7c1c0ba05a936f825bd636e6cb0ded6784a73149b6461af09c119d9c",
-				"dweb:/ipfs/QmTpqCZKSxAaSyUTcFvZqM8dK5JJ9EBXg4b7B1wBBdTtxy"
+				"bzz-raw://30ce61d878de328453c13100d37dafa42737a9df105453e1ba76e66d2e7ac120",
+				"dweb:/ipfs/QmZHUWWRgY58MC4ftN5kdCYhR7hKw3z3DJQHWWTBKW1Byp"
 			]
 		}
 	},

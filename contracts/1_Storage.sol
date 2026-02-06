@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MIT
 
-
+import "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol";
 
 
 pragma solidity ^0.8.26;
@@ -51,10 +51,17 @@ contract Vote {
 
     enum VotingStatus {NotStarted, InProgress, Ended}
     enum Gender {NotSpecified, Male, Female, Other}
+    
+    //define coin
+    IERC20 public gldtoken; //our token is type of ierc
+    
+    //use lib
+     using  SafeERC20 for IERC20; //we can use methond of lib for ierc20 type
 
 
-    constructor() {
+    constructor(address tokenaddress){
       electionCommission = msg.sender;
+      gldtoken = IERC20(tokenaddress);
     }
 
 
@@ -183,6 +190,10 @@ contract Vote {
       require(voterDetails[_voterId].voterAddress == msg.sender , "You aare not authourtherized!");
       require(voterDetails[_voterId].voteCandidateId == 0 , "You are already voted!");
       require(_candidateId >= 1 &&_candidateId <3 , "candidateId is Wreong" );
+      
+      //check balance
+      require(gldtoken.balanceOf(msg.sender) > 0 , "you do not have suffent token !");
+
     //now add vote
     voterDetails[_voterId].voteCandidateId = _candidateId; //candidate id
     candidateDetails[_candidateId].votes ++; //candidae vote update

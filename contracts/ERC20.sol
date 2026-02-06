@@ -77,7 +77,7 @@ constructor(){
         //check balalnce
         require(balanceOfUser[msg.sender] >= value , "insufficent balance ! check out balancee..");
         //give aprove
-        allowedToken[msg.sender][spender] = value;
+        allowedToken[msg.sender][spender] = value;//curremt user send to sender to get approval
        emit  Approval(msg.sender,spender, value);
         return  true;
     }

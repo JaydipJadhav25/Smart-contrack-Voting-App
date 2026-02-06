@@ -3,34 +3,38 @@
 
 pragma solidity >=0.7.0 <0.9.0;
 
-contract Owner  {
+contract A  {
 
-    address public  boos;
-    uint public founds = 0;
-    constructor(){
-        boos = msg.sender;
-    }
-
-    //custom errors :
-    error NotAuthorized(string message);
-    
-    // modifier checkPerson(address _person){
-    //    if(boos != _person) revert NotAuthorized();
-    //     _;
-    // }
+uint256 counter = 0;
 
 
-    function addFounds(uint _momey) public{
-        //check isboos or not
-       if(boos !=  msg.sender) revert NotAuthorized("access desmissed ! you are not boss");
-      founds = _momey;
-    }
+function set(uint256 val) public {
+  counter = val;
+}
 
 
-      function checkTimestamp() public view returns (uint){
-        return  block.timestamp;
-    }
-
+function get() public view returns (uint) {
+   return  counter;
+}
 
    
-} 
+}
+
+
+
+contract B {
+  function getVal(A acontractAddress) external view  returns(uint){
+       return   acontractAddress.get();
+  }
+
+
+   function setVal(A acontractAddress) external{
+       acontractAddress.set(20);
+  }
+
+  function demo(string memory name , uint age , uint[] memory fixarray) public  pure  returns(bytes memory){
+    return abi.encode(name , age , fixarray);
+
+  }
+  
+}
