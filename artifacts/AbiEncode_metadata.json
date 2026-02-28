@@ -22,6 +22,78 @@
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "encodeCall",
+				"outputs": [
+					{
+						"internalType": "bytes",
+						"name": "",
+						"type": "bytes"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "encodeWithSelector",
+				"outputs": [
+					{
+						"internalType": "bytes",
+						"name": "",
+						"type": "bytes"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "encodeWithSignature",
+				"outputs": [
+					{
+						"internalType": "bytes",
+						"name": "",
+						"type": "bytes"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -37,7 +109,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/Counter.sol": "AbiEncode"
+			"contracts/AbiEncoding.sol": "AbiEncode"
 		},
 		"evmVersion": "osaka",
 		"libraries": {},
@@ -51,12 +123,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/Counter.sol": {
-			"keccak256": "0x1dd32dfd11d29b5976caec9549e2b917c8a9626526453143ce38bfe28a9fd485",
+		"contracts/AbiEncoding.sol": {
+			"keccak256": "0xa93592f33cc22a6d242712a5af5ff1eddf5c0c6e4005e6228a538d3d50364727",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://5a0c307394f9b7363c69957a6adc1d2c017aff37e3135c86543eb63f4f2869e2",
-				"dweb:/ipfs/QmUd1nKxZN1woxpJY7EuPUBRHt9TDe6nHbUfygAJ4ow2Tz"
+				"bzz-raw://b9faa830b9efc01c8445acb857872ed2f17bde4d416897a86c8804fe203eeff7",
+				"dweb:/ipfs/QmeaFqzbe9zDieu8yBfWaUL4cLQynE2VKKdRmSc6VhVdgV"
 			]
 		}
 	},

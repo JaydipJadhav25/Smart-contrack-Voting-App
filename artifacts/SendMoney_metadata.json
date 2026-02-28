@@ -1,0 +1,65 @@
+{
+	"compiler": {
+		"version": "0.8.31+commit.fd3a2265"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_to",
+						"type": "address"
+					}
+				],
+				"name": "trnsfer",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "payable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/sendMoeny.sol": "SendMoney"
+		},
+		"evmVersion": "osaka",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/sendMoeny.sol": {
+			"keccak256": "0xce25d8f098e36c5cee1109d35e74c661c63570411204243037d8df7af09c96d7",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://ad9055975aaba6c09ff9ef98cae8a8bfce00c96fc0306f2b5fcff7568f10814a",
+				"dweb:/ipfs/QmRSAGrmpiNHhDatXozZgZKH7qZDhBHqVQqcexbFW78kJU"
+			]
+		}
+	},
+	"version": 1
+}

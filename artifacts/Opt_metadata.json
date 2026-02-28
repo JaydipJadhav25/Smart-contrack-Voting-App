@@ -1,0 +1,67 @@
+{
+	"compiler": {
+		"version": "0.8.31+commit.fd3a2265"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "apple",
+				"outputs": [],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "banana",
+				"outputs": [],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "cat",
+				"outputs": [],
+				"stateMutability": "pure",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/OptimizationFn.sol": "Opt"
+		},
+		"evmVersion": "osaka",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/OptimizationFn.sol": {
+			"keccak256": "0xd7955c12306780c56d7326ac06820f5c1431befb12731abb0258e8dedcead28a",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://c638a5df74f4d5658b578289aace5fe4ec1e092c75ec5b306d2efdc6abfffde1",
+				"dweb:/ipfs/QmNy3sx75AHN8EwSJLGcPsrVXD5bLgLe3PjKNLsQG5Cc8v"
+			]
+		}
+	},
+	"version": 1
+}

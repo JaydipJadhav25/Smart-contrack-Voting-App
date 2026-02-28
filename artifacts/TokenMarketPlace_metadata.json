@@ -183,13 +183,6 @@
 				"type": "event"
 			},
 			{
-				"inputs": [],
-				"name": "adjustTokenPriceBasedOnDemand",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
 				"inputs": [
 					{
 						"internalType": "uint256",
@@ -231,7 +224,7 @@
 						"type": "uint256"
 					}
 				],
-				"stateMutability": "nonpayable",
+				"stateMutability": "view",
 				"type": "function"
 			},
 			{
@@ -486,11 +479,11 @@
 			]
 		},
 		"contracts/TokenMarket.sol": {
-			"keccak256": "0xdaac7cde2fca585e9e6186fee8d59fa849b9df90f74b479377d7b9dd3d5f4a57",
+			"keccak256": "0xe45b108d631d67d3b77c455b752b72b9bbca8b0b05e6ff5ac2029271ca43f99b",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://b2a57cf6e317d42b5d9c2a7c9b39d2c9c67d7f5934c888bd87c6766d89d4d0f7",
-				"dweb:/ipfs/QmWXz3iGpSqFJCcWmK9vKa5bDCBzg3KTRAMwXWfQ7EJUKh"
+				"bzz-raw://9bbe3eb71c9586dd1d17d8ef9018a01127ebc041f300c79b9d541ec362d24de1",
+				"dweb:/ipfs/QmSj6zjA47QEycJ5sJWsTJgYv2ywkAm37xzwo4NsqgZ6gQ"
 			]
 		},
 		"hardhat/console.sol": {

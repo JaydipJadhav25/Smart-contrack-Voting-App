@@ -483,11 +483,11 @@
 			]
 		},
 		"contracts/OpenzaplineERC20.sol": {
-			"keccak256": "0xf7ae638b2023aa9af937dfdeeb54a454dcbf3ddb7771d503485eb06fb033d4bc",
+			"keccak256": "0xc5d086107d697eb3e578f69c6f786e9557528880ec71b881e05b48e9655729f4",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://0cbe3b2912f5e677a6cbb0b7c8b0e8cc5f4f1f60157be798d23fce1f8c559453",
-				"dweb:/ipfs/QmU9uGC3aRj9wXN6qfpfMAbWnbsDj9qa7TYLj5UEKaevAY"
+				"bzz-raw://14d3e0e1d64c9889e59335f439a48652f987bc7a104c1bc822065181fb9684e2",
+				"dweb:/ipfs/Qmaf9kLTjRS1eTwK7XFCtPaJqHNV4fQrofYEjFM6NBuCmL"
 			]
 		}
 	},

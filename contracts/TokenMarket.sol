@@ -11,7 +11,8 @@ contract TokenMarketPlace is Ownable {
 using SafeERC20 for IERC20;
 using SafeMath for uint256;
 
-uint256 public tokenPrice = 2e16 wei; // 0.02 ether per GLD token just balance in wei //2 ^26 wei => 0.2 ether price of token
+// uint256 public tokenPrice = 2e16 wei; // 0.02 ether per GLD token just balance in wei //2 ^26 wei => 0.2 ether price of token
+uint256 public tokenPrice = 10000000000000000 wei; // 0.01 ether per GLD token just balance in wei //2 ^26 wei => 0.2 ether price of token
 uint256 public sellerCount = 1;
 uint256 public buyerCount=1;
 uint public prevAdjustedRatio;
@@ -34,20 +35,21 @@ constructor(address _gldToken) Ownable(msg.sender){
 
 
 // Updated logic for token price calculation with safeguards
-function adjustTokenPriceBasedOnDemand() public {
-   uint marketDemandRatio = buyerCount.mul(1e18).div(sellerCount); 
-   uint smoothingFactor = 1e18;
-   uint adjustedRatio = marketDemandRatio.add(smoothingFactor).div(2);
-   if(prevAdjustedRatio!=adjustedRatio){
-    prevAdjustedRatio=adjustedRatio;
-    uint newTokenPrice =  tokenPrice.mul(adjustedRatio).div(1e18);
-    uint minimumPrice = 2e16;
-    if(newTokenPrice<minimumPrice){
-        tokenPrice = minimumPrice;
-    }
-    tokenPrice = newTokenPrice;
-   }
-}
+// i just make it simple do not chnage token price on demad and sell ok
+// function adjustTokenPriceBasedOnDemand() public {
+//    uint marketDemandRatio = buyerCount.mul(1e18).div(sellerCount); 
+//    uint smoothingFactor = 1e18;
+//    uint adjustedRatio = marketDemandRatio.add(smoothingFactor).div(2);
+//    if(prevAdjustedRatio!=adjustedRatio){
+//     prevAdjustedRatio=adjustedRatio;
+//     uint newTokenPrice =  tokenPrice.mul(adjustedRatio).div(1e18);
+//     uint minimumPrice = 2e16;
+//     if(newTokenPrice<minimumPrice){
+//         tokenPrice = minimumPrice;
+//     }
+//     tokenPrice = newTokenPrice;
+//    }
+// }
 
 // Updated logic for token price calculation with safeguards
 // function adjustTokenPriceBasedOnDemand() public {
@@ -65,9 +67,9 @@ function adjustTokenPriceBasedOnDemand() public {
 
 // }
 
-function calculateTokenPrice(uint _amountOfToken) public returns (uint) {
+function calculateTokenPrice(uint _amountOfToken) public view  returns (uint) {
     require( _amountOfToken > 0 ,"amont of token is not less than zero or zero!");
-    adjustTokenPriceBasedOnDemand();
+    // adjustTokenPriceBasedOnDemand();
      uint  amountopay = _amountOfToken.mul(tokenPrice).div(1e18);//this is power of token  one token 1e18 => for floting number use
      console.log("amount token : " , amountopay);
      return amountopay;
@@ -76,16 +78,34 @@ function calculateTokenPrice(uint _amountOfToken) public returns (uint) {
 // Buy tokens from the marketplace
 function buyGLDToken(uint256 _amountOfToken) public payable {
     //check amout of token ig grater than zero
-    uint tokemPrice = calculateTokenPrice(_amountOfToken);
+    uint requiredTokenPrice= calculateTokenPrice(_amountOfToken);
     //get correct token price from user
-    require(tokemPrice == msg.value , "fill correct token price");
+    // require(tokemPrice ==  msg.value , "fill correct token price");
+    // require(msg.value >= requiredTokenPrice , "fill correct token price");
+    //if user pay more monry sned back to usr
+    // if (msg.value > requiredTokenPrice) {
+    // payable(msg.sender).transfer(
+    //     msg.value - requiredTokenPrice
+    // );
+// }
+
+
+//now to demo pay only token price . for any token amount
+require(msg.value > 0 , "fill correct token price");
+
+
     //this function automatically take ether from user and stor incontract
     // gldToken.safeTransfer( gldToken , msg.address , _amountOfToken);
+    // gldToken.safeTransfer( msg.sender , _amountOfToken);
+
+    //just fro purpose we juts 0.01 eth fro any amount of token
     gldToken.safeTransfer( msg.sender , _amountOfToken);
     buyerCount++;
     //ement event
-    emit TokenBought(msg.sender, _amountOfToken, tokemPrice);
-   
+    emit TokenBought(msg.sender, _amountOfToken, requiredTokenPrice);
+    
+
+ 
 }
 
 
