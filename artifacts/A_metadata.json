@@ -6,29 +6,45 @@
 	"output": {
 		"abi": [
 			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_bAddress",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
 				"inputs": [],
-				"name": "get",
+				"name": "bContract",
 				"outputs": [
 					{
-						"internalType": "uint256",
+						"internalType": "contract B",
 						"name": "",
-						"type": "uint256"
+						"type": "address"
 					}
 				],
 				"stateMutability": "view",
 				"type": "function"
 			},
 			{
-				"inputs": [
+				"inputs": [],
+				"name": "callB",
+				"outputs": [
 					{
-						"internalType": "uint256",
-						"name": "val",
-						"type": "uint256"
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
 					}
 				],
-				"name": "set",
-				"outputs": [],
-				"stateMutability": "nonpayable",
+				"stateMutability": "view",
 				"type": "function"
 			}
 		],
@@ -45,7 +61,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/2_Owner.sol": "A"
+			"contracts/TxOrigin/TxOrigin.sol": "A"
 		},
 		"evmVersion": "osaka",
 		"libraries": {},
@@ -59,12 +75,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/2_Owner.sol": {
-			"keccak256": "0xf393557b16b6a87b3441fb84a03d2a27f9569071e7d600f45929fef56a79c678",
-			"license": "GPL-3.0",
+		"contracts/TxOrigin/TxOrigin.sol": {
+			"keccak256": "0xf79adfa780393dd2b246691b1379ba436ac1a6a3e046550afbbd6c5d4c47b5d6",
+			"license": "MIT",
 			"urls": [
-				"bzz-raw://28fba86526f833740a532a2e38a3911b980a05865fa4d7ce89aaea36cd34a3eb",
-				"dweb:/ipfs/QmfFvBFNfyqn3Hj87kfnqSeSW8UKXHJQWSruaHTKfRsDN2"
+				"bzz-raw://6c30e065c6c94471f33f07b58cac96bf01297ecf42635601f194a0ad10735c32",
+				"dweb:/ipfs/QmRxPMAprvHTnBnQ8yAMcuoAbd69TAHgw8vVDgjb84cKmQ"
 			]
 		}
 	},

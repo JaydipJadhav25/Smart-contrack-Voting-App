@@ -1,0 +1,64 @@
+{
+	"compiler": {
+		"version": "0.8.31+commit.fd3a2265"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "getOriginAndSender",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/TxOrigin/TxOrigin.sol": "C"
+		},
+		"evmVersion": "osaka",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/TxOrigin/TxOrigin.sol": {
+			"keccak256": "0xf79adfa780393dd2b246691b1379ba436ac1a6a3e046550afbbd6c5d4c47b5d6",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://6c30e065c6c94471f33f07b58cac96bf01297ecf42635601f194a0ad10735c32",
+				"dweb:/ipfs/QmRxPMAprvHTnBnQ8yAMcuoAbd69TAHgw8vVDgjb84cKmQ"
+			]
+		}
+	},
+	"version": 1
+}

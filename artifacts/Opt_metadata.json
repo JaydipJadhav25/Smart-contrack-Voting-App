@@ -7,23 +7,29 @@
 		"abi": [
 			{
 				"inputs": [],
-				"name": "apple",
-				"outputs": [],
-				"stateMutability": "pure",
+				"name": "a",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
 				"type": "function"
 			},
 			{
 				"inputs": [],
-				"name": "banana",
+				"name": "chnageA",
 				"outputs": [],
-				"stateMutability": "pure",
+				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
 				"inputs": [],
-				"name": "cat",
+				"name": "chnageAagin",
 				"outputs": [],
-				"stateMutability": "pure",
+				"stateMutability": "nonpayable",
 				"type": "function"
 			}
 		],
@@ -55,11 +61,11 @@
 	},
 	"sources": {
 		"contracts/OptimizationFn.sol": {
-			"keccak256": "0xd7955c12306780c56d7326ac06820f5c1431befb12731abb0258e8dedcead28a",
+			"keccak256": "0x8b6830d43a9154e9d92af4ea59db30b2f5ce6a3b86d545aedc910263cd17eda5",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://c638a5df74f4d5658b578289aace5fe4ec1e092c75ec5b306d2efdc6abfffde1",
-				"dweb:/ipfs/QmNy3sx75AHN8EwSJLGcPsrVXD5bLgLe3PjKNLsQG5Cc8v"
+				"bzz-raw://6cf1d6ffafe6f02ad337d7f5582cc5c6788d1fdfc08f430622ede7269c68aa3a",
+				"dweb:/ipfs/Qmepbf3ort6ZA49bDpLMh43b9GTLXYp6jNyhpEerkgukUu"
 			]
 		}
 	},
