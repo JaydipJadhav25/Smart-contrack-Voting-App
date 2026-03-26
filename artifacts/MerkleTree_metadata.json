@@ -17,6 +17,19 @@
 				"type": "constructor"
 			},
 			{
+				"inputs": [],
+				"name": "root",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "bytes32[]",
@@ -80,11 +93,11 @@
 			]
 		},
 		"contracts/MerkleTree/Merkletree.sol": {
-			"keccak256": "0x2942ab5a84c7c3b8f97edd9d7e58654d86720a6d4c8420f9e4e7865cef684913",
+			"keccak256": "0x15c937262d31073500e41f39f618d2ea5aaad8a0c48c7d48e7969c8eafefc028",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://5dfeba583b805eea67505a379e9e0ac36820a9bed216662e1ff111c37952829e",
-				"dweb:/ipfs/QmZBTa7e3wkq839prqAJju6YMhU6ojjcp5bS2zcHNBCmVY"
+				"bzz-raw://13ce1fd76b267b3cd12411c27d61a1736a1dc768f7dd7e1807c4a1d9cd9e6ace",
+				"dweb:/ipfs/Qmd8dyJfBoJPzV33iMSJERDi8FAt6AovtpZVvYMq3UgSX7"
 			]
 		}
 	},
